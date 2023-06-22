@@ -1,0 +1,23 @@
+:root {
+    margin: 0;
+}
+
+/* テキストカラー、フォント */
+h1,h2,h3,h4,h5,h6,p, label {
+    color: #2d535a;
+}
+
+header {
+    display: block;
+    height: 5rem;
+    background-color: #3AA6B9;
+    margin-bottom: 3rem;
+}
+
+input {
+    box-sizing: border-box;
+}
+
+.wrapper-heading {
+    text-align: center;
+}

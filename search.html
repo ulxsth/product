@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/search.css">
+    <title>検索画面</title>
+</head>
+<body>
+    <header></header>
+    <main>
+        <div id="search-bar-wrapper">
+            <!-- TODO: PHPではPOST -->
+            <form action="result.html" class="search-form">
+                <label>
+                    <input type="text" placeholder="キーワードを入力">
+                </label>
+                <button type="submit" aria-label="検索"></button>
+            </form>
+        </div>
+
+        <h2 class="wrapper-heading">詳細検索</h2>
+        <div class="detail-search-wrapper">
+            <!-- TODO: PHPではPOST -->
+            <form action="result.html" method="get">
+
+                <!-- TODO: Categorysテーブルからリスト取得して一覧表示 -->
+                <div class="category-wrapper">
+                    <label for="category">カテゴリー</label>
+                    <select name="category" id="category">
+                        <option value="grocery">食料品</option>
+                        <option value="life_supplies">生活用品</option>
+                        <option value="preference_product">嗜好品</option>
+                    </select>
+                </div>
+
+                <!-- TODO: 入力値バリデーション -->
+                <div class="price-wrapper">
+                    <label for="price">値段</label> <br>
+                    <input type="number" name="price-min" id="price-min" min="0">以上
+                    <input type="number" name="price-max" id="price-max" min="0">以下
+                </div>
+
+                <button type="submit">条件を指定して検索</button>
+            </form>
+        </div>
+    </main>
+</body>
+</html>
