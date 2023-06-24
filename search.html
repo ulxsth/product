@@ -11,7 +11,7 @@
 <body>
     <header></header>
     <main>
-        <div id="search-bar-wrapper">
+        <div class="search-bar-wrapper">
             <!-- TODO: PHPではPOST -->
             <form action="result.html" class="search-form">
                 <label>
@@ -21,29 +21,37 @@
             </form>
         </div>
 
-        <h2 class="wrapper-heading">詳細検索</h2>
         <div class="detail-search-wrapper">
+            <h1>詳細検索</h1>
             <!-- TODO: PHPではPOST -->
             <form action="result.html" method="get">
 
                 <!-- TODO: Categorysテーブルからリスト取得して一覧表示 -->
                 <div class="category-wrapper">
-                    <label for="category">カテゴリー</label>
-                    <select name="category" id="category">
-                        <option value="grocery">食料品</option>
-                        <option value="life_supplies">生活用品</option>
-                        <option value="preference_product">嗜好品</option>
-                    </select>
+                    <h2>カテゴリー</h2>
+                    <label class="category-select">
+                        <!-- todo: 初期状態は選択されていないようにする -->
+                        <select>
+                            <option>食料品</option>
+                            <option>生活用品</option>
+                            <option>嗜好品</option>
+                        </select>
+                    </label>
                 </div>
 
                 <!-- TODO: 入力値バリデーション -->
                 <div class="price-wrapper">
-                    <label for="price">値段</label> <br>
-                    <input type="number" name="price-min" id="price-min" min="0">以上
-                    <input type="number" name="price-max" id="price-max" min="0">以下
+                    <h2>値段</h2>
+                    <input type="number" class="price-input price-min" min="0"><span class="price-label"> 円以上</span>
+                    <span class="space"></span>
+                    <input type="number" class="price-input price-max" min="0"><span class="price-label"> 円以下</span>
                 </div>
 
-                <button type="submit">条件を指定して検索</button>
+                <div class="submit-button-wrapper">
+                    <button class="submit-button" type="submit">
+                        条件を指定して<br><span class="emp-span">検索</span>
+                    </button>
+                </div>
             </form>
         </div>
     </main>
