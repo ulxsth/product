@@ -1,0 +1,34 @@
+main {
+    margin: 0 3rem;
+}
+
+
+/* カウンタ */
+.result-count-wrapper {
+    text-align: right;
+}
+
+
+/* 商品一覧カード */
+/* todo: ホバーを実装してもいいかも */
+.result-card {
+    border-radius: 1rem;
+    background-color: #e6edf3;
+    border: 1px soild;
+    padding: 2.5rem;
+    margin-bottom: 1rem;
+}
+.result-card > p {
+    margin-bottom: 0.5rem;
+}
+.price-para {
+    text-align: right;
+}
+.price-amount-span {
+    font-weight: bold;
+    font-size: xx-large;
+}
+.price-unit-span {
+    font-weight: bold;
+    font-size: large;
+}
